@@ -4,10 +4,9 @@ from http import HTTPStatus
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request, Response
 from telegram import Update, constants
-import json
 from telegram.ext import Application, ContextTypes, CommandHandler, MessageHandler, filters
 from remnawave import RemnawaveSDK, WebhookUtility
-from remnawave.models import UsersResponseDto, UserResponseDto, UpdateUserRequestDto
+from remnawave.models import UpdateUserRequestDto
 
 
 # Load environment variables
