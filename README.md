@@ -52,3 +52,11 @@ networks:
    ### This secret is used to sign the webhook payload, must be exact 64 characters. Only a-z, 0-9, A-Z are allowed.
    WEBHOOK_SECRET_HEADER="<remna webhook secret>"
    ```
+
+## Setup reverse proxy
+   If you use caddy, you need edit config like this:
+   ```
+   https://<bot domain> {
+      reverse_proxy * http://remna-notificator:8000
+  }
+   ```
