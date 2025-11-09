@@ -9,10 +9,15 @@
   ```
   TELEGRAM_BOT_TOKEN=<bot tocken>
   RAILWAY_PUBLIC_DOMAIN=<bot webhook domain>
-  REMNA_TOKEN="<remna api tocken>"
+  REMNA_TOKEN="<remna api token>"
   REMNA_PUBLIC_DOMAIN=https://<remna panel domain>
   REMNA_SECRET_KEY="<remna webhook secret>"
   ```
+  - TELEGRAM_BOT_TOKEN - you may get this token from bot father
+  - RAILWAY_PUBLIC_DOMAIN - you domain where bot is work need https
+  - REMNA_TOKEN - you remnaware token get from remna settings
+  - REMNA_PUBLIC_DOMAIN - you remnaware panel domain
+  - REMNA_SECRET_KEY - This secret is used to sign the webhook payload, must be exact 64 characters. Only a-z, 0-9, A-Z are allowed.
 
   For bot you need webhook domain for this bot via https.
   Installation docker compose for install with remna panel:
@@ -35,7 +40,7 @@ networks:
       name: remnawave-network
   ```
 
-## Remna settings
+## Remna env file settings
    ```
    ### WEBHOOK ###
    WEBHOOK_ENABLED=true
