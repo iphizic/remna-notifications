@@ -5,7 +5,10 @@
   of end subscription.
 
 ## Instalation
-  For install this project make .env vars:
+  ```
+  mkdir /opt/notificator
+  ```
+  For install this project make /opt/notificator/.env vars:
   ```
   TELEGRAM_BOT_TOKEN=<bot tocken>
   RAILWAY_PUBLIC_DOMAIN=<bot webhook domain>
@@ -20,7 +23,7 @@
   - REMNA_SECRET_KEY - This secret is used to sign the webhook payload, must be exact 64 characters. Only a-z, 0-9, A-Z are allowed.
 
   For bot you need webhook domain for this bot via https.
-  Installation docker compose for install with remna panel:
+  Installation /opt/notificator/docker-compose.yaml for install with remna panel:
   ```
   services:
     remna-notificator:
@@ -40,7 +43,7 @@ networks:
       name: remnawave-network
   ```
 
-## Remna env file settings
+## Remna /opt/remnawave/env file settings
    ```
    ### WEBHOOK ###
    WEBHOOK_ENABLED=true
